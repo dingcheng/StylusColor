@@ -1,4 +1,5 @@
 A stylus color management tool
+============
 
 Usage:
 0. Install node.js and npm.
