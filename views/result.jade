@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	h1= title
+	-var divcount=0,colorcount=0;
+	-for(key in colors){
+		-divcount++;
+		-colorcount++;
+		div(style='#{colors[key].style}')
+			span.repeat #{divcount}
+			span #{key}
+			span.msg
+				| [#{colors[key].c.split('').sort().join('')}]
+			-if(colors[key].repeat)
+				-colorcount--;
+				span.repeat
+					| [REPEAT]
+			.inner
+				br
+				-for (var i = 0; i < colors[key].place.length; i++) {
+					| #{colors[key].place[i].line}-#{colors[key].place[i].file}
+					br
+				-};
+			.inner
+				-var coloritems=colors[key].style.split(';').sort();
+				-for (var i = 0; i < coloritems.length; i++) {
+					-if(coloritems[i].length>0)
+						li #{coloritems[i]}
+				-};
+	-}
+	div
+		span.repeat Summary
+		li Instances: #{divcount}
+		li Unique color sets: #{colorcount}
