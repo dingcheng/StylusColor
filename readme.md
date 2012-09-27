@@ -3,7 +3,9 @@ A stylus color management tool
 
 Function:
 ============
-	Extract all selectors that have color and background-color defined, and present each color set in a separate div. Meta-info like selector, from which .styl file, color definition, and etc are shown too.
+	Extract all selectors that have color and background-color defined,
+	and present each color set in a separate div.
+	Meta-info like selector, from which .styl file, color definition, and etc are shown too.
 Markers:
 ============
 	[BF]: B means background-color is defined for this selector, F means foreground (font?) color is defined.
