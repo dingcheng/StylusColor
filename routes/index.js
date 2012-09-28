@@ -24,7 +24,6 @@ exports.proc=function(req,res){
 	var colorset={},curstyle;
 	for(var key in req.files.stylus){
 		if (!req.files.stylus[key]) {break};
-		console.log(key);
 		var styl = req.files.stylus[key];
 		if (!styl.filename.match(/.styl/)) {continue};
 		fcon = fs.readFileSync(styl.path,'utf8');
