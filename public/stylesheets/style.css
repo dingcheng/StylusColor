@@ -8,6 +8,7 @@ body {
 div{
 	padding: 5px;
 	margin: 1px;
+	overflow: auto;
 }
 
 #container{
