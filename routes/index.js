@@ -23,6 +23,7 @@ exports.proc=function(req,res){
 	var prevlevel=0,curlevel=0,prevline='';
 	var colorset={},curstyle;
 	for(var key in req.files.stylus){
+		if (!req.files.stylus[key]) {break};
 		console.log(key);
 		var styl = req.files.stylus[key];
 		if (!styl.filename.match(/.styl/)) {continue};

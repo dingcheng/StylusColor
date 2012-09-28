@@ -4,26 +4,24 @@ body {
   font-weight: bold;
   text-align: center;
 }
-* {
-	border-radius: 5px;
-}
 
 div{
-	border: 1px dashed gray;
 	padding: 5px;
-	overflow: auto;
 	margin: 1px;
 }
 
 #container{
+	text-align: left;
+	position: relative;
 	margin: auto;
 }
 
 #centerbox{
+	position: relative;
 	float: none;
-	border: none;
 	margin: auto;
 	min-width: 665px;
+	height: 100%;
 }
 
 .linebox{
@@ -32,12 +30,16 @@ div{
 }
 
 .item{
-	margin: 6px;
+	position: absolute;
 	min-height: 100px;
 	width: 300px;
 	border: 1px solid gray;
-	border-radius: 10px;
 	float: left;
+	box-shadow: 2px 2px 2px gray;
+}
+
+.item:hover{
+	box-shadow: 2px 2px 10px black;
 }
 
 .inner{
@@ -60,6 +62,5 @@ div{
 span{
 	display: inline-block;
 	margin: 5px;
-	box-shadow: 5px 5px 10px gray;
 	border: 1px dashed black;
 }
